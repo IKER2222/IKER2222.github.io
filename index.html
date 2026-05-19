@@ -11,10 +11,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="loader">
+        <h1 class="loader-name">Íker Escolano Picó</h1>
+    </div>
+
     <div id="blob"></div>
     <div id="blob-blur"></div>
 
-    <nav class="navbar hidden-reveal">
+    <nav class="navbar reveal">
         <div class="logo">Íker.</div>
         <ul class="nav-links">
             <li><a href="#about">Sobre Mí</a></li>
@@ -24,7 +28,7 @@
     </nav>
 
     <main>
-        <section id="hero" class="hero hidden-reveal">
+        <section id="hero" class="hero reveal">
             <h1 class="hero-title">Hola, soy <span class="highlight">Íker</span>.</h1>
             <p class="hero-subtitle">Desarrollador de Aplicaciones y Páginas Web.</p>
             <p class="hero-description">Actualmente estudiante de 1º DAM en el IES Paco Mollá, apasionado por crear experiencias digitales creativas, dinámicas e innovadoras.</p>
@@ -32,9 +36,9 @@
         </section>
 
         <section id="projects" class="projects">
-            <h2 class="section-title hidden-reveal">Proyectos Destacados</h2>
+            <h2 class="section-title reveal">Proyectos Destacados</h2>
             
-            <div class="project-card hidden-reveal">
+            <div class="project-card reveal">
                 <div class="project-content">
                     <div class="project-header">
                         <img src="assets/logo-weresume.png" alt="WeResume Logo" class="project-logo">
@@ -52,7 +56,7 @@
                 </div>
             </div>
 
-            <div class="project-card hidden-reveal">
+            <div class="project-card reveal">
                 <div class="project-content">
                     <div class="project-header">
                         <img src="assets/logo-dungeonmaker.png" alt="DungeonMaker Logo" class="project-logo">
@@ -73,11 +77,29 @@
                     </a>
                 </div>
             </div>
+
+            <div class="project-card reveal">
+                <div class="project-content">
+                    <div class="project-header">
+                        <div class="project-logo-placeholder" style="width: 80px; height: 80px; border-radius: 20px; background: linear-gradient(135deg, #3b82f6, #1d4ed8); display: flex; align-items: center; justify-content: center; font-size: 2rem; color: white; font-weight: 800; box-shadow: 0 10px 20px rgba(0,0,0,0.3);">BC</div>
+                        <h3 class="project-title">BackgroundChanger</h3>
+                    </div>
+                    <p class="project-description">
+                        Una utilidad nativa para macOS que automatiza la gestión de tus fondos de pantalla. Permite configurar carpetas de imágenes y definir intervalos de tiempo específicos para que el escritorio cambie dinámicamente según la hora del día, mejorando la personalización y el flujo de trabajo.
+                    </p>
+                    <ul class="project-tech">
+                        <li>SwiftUI</li>
+                        <li>macOS App</li>
+                        <li>AppKit</li>
+                        <li>File System API</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <section id="about" class="about hidden-reveal">
-            <h2 class="section-title">Sobre mí y mis habilidades</h2>
-            <div class="about-content">
+        <section id="about" class="about">
+            <h2 class="section-title reveal">Sobre mí y mis habilidades</h2>
+            <div class="about-content reveal">
                 <p>Soy un desarrollador en formación con un gran interés en crear aplicaciones elegantes y funcionales. Disfruto enfrentando retos técnicos y transformando ideas en código limpio y atractivo.</p>
                 <div class="skills-grid">
                     <span class="skill-tag">HTML5 y CSS3</span>
@@ -89,17 +111,22 @@
             </div>
         </section>
 
-        <section id="contact" class="contact hidden-reveal">
-            <h2 class="section-title">Hablemos</h2>
-            <p>¿Tienes una idea en mente o quieres colaborar? Me encantaría conectar contigo.</p>
-            <a href="mailto:ikerescolano2@gmail.com" class="btn-secondary">Enviar mensaje</a>
+        <section id="contact" class="contact">
+            <h2 class="section-title reveal">Hablemos</h2>
+            <div class="reveal">
+                <p>¿Tienes una idea en mente o quieres colaborar? Me encantaría conectar contigo.</p>
+                <a href="mailto:ikerescolano2@gmail.com" class="btn-secondary">Enviar mensaje</a>
+            </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="reveal">
         <p>&copy; 2026 Íker Escolano Picó.</p>
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+    <script src="animations.js"></script>
 </body>
 </html>

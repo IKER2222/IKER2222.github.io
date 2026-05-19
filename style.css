@@ -24,6 +24,28 @@ body {
     position: relative;
 }
 
+/* Loader Overlay */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loader-name {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 800;
+    letter-spacing: -2px;
+    opacity: 0;
+    color: var(--text-primary);
+}
+
 /* Background Animated Blob */
 #blob {
     background-color: var(--accent-color);
@@ -388,4 +410,9 @@ footer {
         width: 60px;
         height: 60px;
     }
+}
+
+/* Reveal class for GSAP animations */
+.reveal {
+    opacity: 0;
 }
